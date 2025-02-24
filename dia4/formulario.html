@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+
+<body>
+    <h1>Formulário de contato</h1>
+
+    <form action="">
+        <label for="">
+            <p>Digite seu nome completo:</p>
+            <input type="text" name="texto" id="" required placeholder="Digite seu nome completo">
+        </label>
+        <br>
+        <label for="">
+            <p>Digite seu email:</p>
+            <input type="email" name="email" id="" required placeholder="Digite seu email">
+        </label>
+        <br>
+        <label for="">
+            <p>Digite seu telefone:</p>
+            <input type="tel" name="telefone" id="" placeholder="(11) XXXXX-XXXX" maxlength="11">
+        </label>
+        <label for="">
+            <p>Digite o assunto:</p>
+            <input type="text" name="assunto" id="" required>
+            <select name="opcao" id="">
+                <option value="" disabled selected>Digite uma opção</option>
+                <option value="reclamacao">Reclamação</option>
+                <option value="duvidas">Dúvidas</option>
+                <option value="sugestao">Sugestão</option>
+            </select>
+        </label>
+        <br><br>
+        <button type="submit">Enviar</button>
+        <button type="reset">Reset</button>
+    </form>
+
+</body>
+
+</html>
