@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0 auto;
+}
+#header{
+    text-align: left;
+    padding: 20px;
+}
+h1{
+    font-family: 'Times New Roman', Times, serif;
+}
+#header p{
+    font-size: 24px;
+}
+.horario{
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-left: 100px;
+}
+table{
+    border: 0.1px solid black;
+    border-spacing: 0px;
+    background-color: #b32b2bad;
+}
+td, th {
+    text-align: center;
+    border: 0.1px solid ;
+    padding: 10px; 
+}
+.thead{
+    text-align: center;
+    vertical-align: middle;
+}
+.tbody{
+    padding: 5px;
+    text-align: center;
+    vertical-align: middle;
+}
+.menu{
+    margin: 20px;
+}
+.bebidas{
+    margin: 20px;
+}
+.doces{
+    margin: 20px;
+}
+.salgados{
+    margin: 20px;
+}
+.contato{
+    margin: 20px;
+}
