@@ -45,6 +45,7 @@ li{
 .itens{
     margin-top: 10px;
     font-weight: normal;
+    list-style-type: disc;
 }
 .salgados h3{
     min-width: 25%;
@@ -96,8 +97,12 @@ td, th {
     margin-top: 10px;
     margin-bottom: 10px;
 }
-.rodape{
-    background: linear-gradient(to top, #6e0e0ead, #cf8867ad);
+footer{
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #6e0e0ead;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
 
