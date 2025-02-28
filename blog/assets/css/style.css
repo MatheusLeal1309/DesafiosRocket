@@ -7,6 +7,9 @@
 body {
     font-family: 'Roboto', sans-serif;
 }
+main{
+    padding: 100px 0 32px 200px;
+}
 
 .conteudo img {
     max-width: 100%;
@@ -47,7 +50,6 @@ p {
 li {
     padding-bottom: 8px;
 }
-
 .badge {
     display: inline-block;
     background-color: #bbbbbb;
@@ -55,7 +57,6 @@ li {
     padding: 8px;
     border-radius: 8px;
 }
-
 pre {
     display: block;
     background-color: #bbbbbb;
@@ -74,13 +75,17 @@ pre {
     margin-bottom: 32px;
 }
 
-header#header {
+#header {
     background-color: #1865ff;
     color: #ffffff;
     padding: 16px 32px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
 }
 
-header p {
+#header p {
     text-indent: 0;
     margin: 0;
 }
@@ -90,6 +95,10 @@ aside {
     color: #ffffff;
     padding: 16px 16px 8px;
     margin: 0 0 16px;
+    position: fixed;
+    width: 200px;
+    top: 100px;
+    bottom: 0;
 }
 
 aside a {

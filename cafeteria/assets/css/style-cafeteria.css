@@ -3,18 +3,73 @@
     padding: 0 auto;
     text-align: center;
 }
-
+html{
+    background-color: #cf9051;
+}
+#header{
+    background: linear-gradient(to top, #6e0e0ead, #cf8867ad);
+    padding: 50px;
+}
 h1{
     font-family: 'Times New Roman', Times, serif;
 }
 #header p{
     font-size: 24px;
 }
-
+.menu{
+    width: 100%;
+    min-height: 20px;
+    margin-top: 5%;
+    margin-bottom: 3%;
+    text-transform: uppercase;
+}
+.bebidas h3{
+    min-width: 20%;
+    max-width: 25%;
+    min-height: 50px;
+    text-transform: uppercase;
+    text-align: left;
+    margin-left: 50px;
+}
+.description{
+    margin-bottom: 3%;
+}
+li{
+    text-align: left;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.titulo {
+    font-weight: bold;
+}
+.itens{
+    margin-top: 10px;
+    font-weight: normal;
+}
+.salgados h3{
+    min-width: 25%;
+    max-width: 25%;
+    min-height: 50px;
+    text-transform: uppercase;
+    text-align: left;
+    margin-left: 50px;
+}
+.doces h3{
+    min-width: 25%;
+    max-width: 25%;
+    min-height: 50px;
+    text-transform: uppercase;
+    text-align: left;
+    margin-left: 50px;
+}
+.horario{
+    padding: 20px;
+    text-transform: uppercase;
+}
 table{
     border: 0.1px solid black;
     border-spacing: 0px;
-    background-color: #b32b2bad;
+    background-color: #ffffff;
     margin: 0 auto;
 }
 td, th {
@@ -22,4 +77,29 @@ td, th {
     border: 0.1px solid ;
     padding: 10px; 
 }
+.contato{
+    margin-top: 25px;
+}
+.contato h2{
+    margin-bottom: 25px;
+}
+.forms{
+    width: 400px;
+    height: 350px;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: #6e0e0ead;
+    border-radius: 50px;
+
+}
+.forms p{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.rodape{
+    background: linear-gradient(to top, #6e0e0ead, #cf8867ad);
+}
+
+
+
 

@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0 auto;
+    font-family: Playfair Display, Georgia, 'Times New Roman', Times, serif;
+}
+#header{
+    text-align: center;
+    background-color: #f3a5f3;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+#header img{
+    width: 80px;
+    height: 80px;
+    border: solid 4px #570457c0;
+    border-radius: 50%;
+}
+#header h1{
+    font-size: 35px;
+    font-family: Playfair Display, Georgia, 'Times New Roman', Times, serif;
+}
+#header p{
+    font-family: Playfair Display, Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.banner img{
+    width: 100%;
+}
+.menu{
+    margin-top: 20px;
+}
+.menu li{
+    background-color: antiquewhite;
+    border-radius: 50px;
+    padding: 25px;
+    margin-right: 10px;
+}
+.menu ul{
+
+}
+a{
+    font-size: 15px;
+    color: #000000;
+}
+#main {
+    flex: 1;
+    margin-left: 220px; 
+    padding-top: 180px;
+    margin-bottom: 20px;
+    margin-right: 10px;
+}
+#main h2{
+    margin-bottom: 10px;
+    font-family: Playfair Display, Georgia, 'Times New Roman', Times, serif;
+}
+.dicas-maquiagem{
+    background-color:  antiquewhite;
+    flex: 1;
+    padding: 50px;
+}
+h4, li{
+    margin-bottom: 10px;
+}
+.tendencias-novidades{
+    background-color: #ff465f;
+    padding: 50px;
+    margin-top: 10px;
+}
+.cuidados-pele{
+    background-color: antiquewhite;
+    padding: 50px;
+    margin-top: 10px;
+}
+.produtos{
+    background-color: #ff465f;
+    padding: 50px;
+    margin-top: 10px;
+}
+aside {
+    background-color: #e78e9a;
+    color: #ffffff;
+    position: fixed;
+    width: 200px;
+    top: 180px;
+    bottom: 0;
+}
+.entre-contato{
+    padding: 20px;
+}
+.entre-contato h3{
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+.entre-contato p{
+    padding: 5px;
+}
+footer{
+    background-color: #e78e9a;
+    color: rgb(0, 0, 0);
+    text-align: center;
+
+}
+
+
+
+
+
