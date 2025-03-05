@@ -3,7 +3,7 @@
     padding: 0 auto;
 }
 #header{
-    background-color: #4675cc;
+    background-color: #006475;
     position: fixed;
     width: 100%;
 }
@@ -12,6 +12,7 @@
 }
 p{
     padding: 2px;
+    font-size: 20px;
 }
 .logo{
     display: flex;
@@ -43,7 +44,10 @@ p{
     margin-left: 20px;
 }
 .primeiro-episodio h2{
-    background-color: #4675cc;
+    margin-left: -20px;
+    border-top: 2px solid #006475;
+    padding: 2px;
+    border-bottom: 2px solid #006475;
 }
 .primeiro-episodio p{
     font-size: 20px;
@@ -52,3 +56,34 @@ p{
 .primeiro-episodio video{
     width: 500px;
 }
+.audios {
+    display: flex;
+    flex-direction: row; 
+    margin-bottom: 20px;
+}
+
+.audios video {
+    width: 400px;  
+    margin-right: 20px;
+}
+
+.audio-conteiner {
+    display: flex;
+    flex-direction: column; 
+}
+
+.audios p {
+    margin-bottom: 10px; 
+}
+
+.audios audio {
+    margin-bottom: 10px; 
+}
+footer{
+    background-color: #006475;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 25px;
+    font-weight: bold;
+}
+
