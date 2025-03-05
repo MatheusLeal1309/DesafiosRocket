@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0 auto;
+}
+#header{
+    background-color: #4675cc;
+    position: fixed;
+    width: 100%;
+}
+#main{
+    padding-top: 70px;
+}
+p{
+    padding: 2px;
+}
+.logo{
+    display: flex;
+}
+.logo img{
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+}
+.titulo{
+    margin-left: 10px;
+}
+.introducao h2{
+    display:flex ;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.video video{
+    width: 600px ;
+}
+.video {
+    text-align: center;
+}
+.primeiro-episodio{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+.primeiro-episodio h2{
+    background-color: #4675cc;
+}
+.primeiro-episodio p{
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+.primeiro-episodio video{
+    width: 500px;
+}

@@ -33,7 +33,7 @@ h1{
     width: 500px;
     margin-top: 30px;
     margin-bottom: 32px;
-    border-radius: 40px;
+    border-radius: 20px;
 }
 h2{
     margin-bottom: 5px;
@@ -60,4 +60,5 @@ p{
 .footer{
     border-radius: 30px;
     background-color: #7c129c;
+    margin-bottom: 10px;
 }

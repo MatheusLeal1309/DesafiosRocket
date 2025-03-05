@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0 auto;
+    font-family: Oswald, Arial, Helvetica, sans-serif;
+    align-items: center;
+}
+html{
+    background-color: #140907;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: #e2e2e2;
+    padding: 30px;
+    border-radius: 50px;
+    margin-top: 30px;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+h1{
+    padding: 25px;
+}
+h2{
+    padding: 25px;
+}
+label{
+    font-size: 18px;
+}
+input{
+    text-align: center;
+    font-size: 18px;
+}
+p{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+select{
+    font-size: 18px;
+}
+button{
+    font-size: 20px;
+    text-align: center;
+}
+form{
+    margin-bottom: 190px;
+}

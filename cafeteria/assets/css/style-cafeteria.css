@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0 auto;
     text-align: center;
+    font-family: 'Times New Roman', Times, serif;
 }
 html{
     background-color: #cf9051;
@@ -10,26 +11,26 @@ html{
     background: linear-gradient(to top, #6e0e0ead, #cf8867ad);
     padding: 50px;
 }
-h1{
-    font-family: 'Times New Roman', Times, serif;
-}
 #header p{
     font-size: 24px;
 }
+#conteudo{
+    display: flex;
+    flex-direction: column;
+}
 .menu{
-    width: 100%;
-    min-height: 20px;
-    margin-top: 5%;
+    margin-top: 3%;
     margin-bottom: 3%;
     text-transform: uppercase;
+    font-size: 30px;
 }
 .bebidas h3{
-    min-width: 20%;
-    max-width: 25%;
-    min-height: 50px;
+    border-bottom: 2px solid #ffff;
+    margin-bottom: 20px;
+    font-size: 25px;
     text-transform: uppercase;
     text-align: left;
-    margin-left: 50px;
+    margin-left: 20px;
 }
 .description{
     margin-bottom: 3%;
@@ -48,30 +49,36 @@ li{
     list-style-type: disc;
 }
 .salgados h3{
-    min-width: 25%;
-    max-width: 25%;
-    min-height: 50px;
+    border-bottom: 2px solid #ffff;
+    font-size: 25px;
+    margin-bottom: 20px;
     text-transform: uppercase;
     text-align: left;
-    margin-left: 50px;
+    margin-left: 20px;
 }
 .doces h3{
-    min-width: 25%;
-    max-width: 25%;
-    min-height: 50px;
+    border-bottom: 2px solid #ffff;
+    font-size: 25px;
+    margin-bottom: 20px;
     text-transform: uppercase;
     text-align: left;
-    margin-left: 50px;
+    margin-left: 20px;
+}
+#main{
+    background-color: #571e1e;
+    padding: 50px;
 }
 .horario{
-    padding: 20px;
+    margin-bottom: 20px;
     text-transform: uppercase;
+    color: #ffffff;
 }
 table{
     border: 0.1px solid black;
     border-spacing: 0px;
     background-color: #ffffff;
     margin: 0 auto;
+    margin-bottom: 20px;
 }
 td, th {
     text-align: center;
@@ -81,28 +88,51 @@ td, th {
 .contato{
     margin-top: 25px;
 }
+.contato p{
+    margin-top: 5px;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
 .contato h2{
     margin-bottom: 25px;
 }
 .forms{
-    width: 400px;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 800px;
     height: 350px;
     margin: 0 auto;
     padding: 10px;
     background-color: #6e0e0ead;
-    border-radius: 50px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 
 }
 .forms p{
+    margin-bottom: 5px;
     margin-top: 10px;
-    margin-bottom: 10px;
+}
+.forms h3{
+    text-transform: uppercase;
+    width: 50%; 
+}
+input{
+    font-size: 20px;
+}
+select{
+    font-size: 20px;
+}
+button{
+    font-size: 20px;
 }
 footer{
     margin-top: 50px;
     padding: 20px;
-    background-color: #6e0e0ead;
+    background-color: #571e1e;
     text-transform: uppercase;
     font-weight: bold;
+    color: #ffffff;
 }
 
 
