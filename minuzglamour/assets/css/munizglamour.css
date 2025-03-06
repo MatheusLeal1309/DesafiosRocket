@@ -86,9 +86,13 @@ aside {
     grid-area: aside;
     background-color: #f3a5f3;
     color: #ffffff;
-    position: fixed;
-    top: 144px;
     bottom: 80px;
+    margin-top: 64px;
+}
+.fixed{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
 }
 footer{
     grid-area: footer;
