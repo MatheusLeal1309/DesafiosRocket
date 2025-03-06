@@ -2,66 +2,50 @@
     margin: 0;
     padding: 0 auto;
     font-family: Playfair Display, Georgia, 'Times New Roman', Times, serif;
-
 }
-#header{
+header{
+    grid-area: header;
     text-align: center;
-    background-color: #f3a5f3;
+    background-color: #e78e9a;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
 }
 #header img{
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     border: solid 4px #570457c0;
     border-radius: 50%;
 }
-#header h1{
-    font-size: 35px;
-    font-family: Playfair Display, Georgia, 'Times New Roman', Times, serif;
-}
 #header p{
-    font-family: Playfair Display, Georgia, 'Times New Roman', Times, serif;
-    font-size: 20px;
+    font-size: 15px;
     margin-bottom: 10px;
 }
 .banner img{
     width: 100%;
 }
 .menu{
-    height: 100%;
-    margin-top: 20px;
+    margin-top: 50px;
 }
 .menu li{
     background-color: antiquewhite;
     border-radius: 50px;
-    padding: 25px;
-    margin-right: 10px;
-}
-.menu ul{
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: stretch;
-    gap: 20px;
+    padding: 6px;
+    margin-right: 9px;
+    margin-bottom: 50px;
 }
 a{
     font-size: 15px;
     color: #000000;
 }
-#main {
-    display: flex;
-    flex-direction: column;
-    margin-left: 220px; 
-    padding-top: 180px;
-    margin-bottom: 20px;
-    margin-right: 10px;
+main {
+    grid-area: main;
+    /* overflow: auto; */
+    padding-top: 64px;
 }
 #main h2{
     margin-bottom: 10px;
-    font-family: Playfair Display, Georgia, 'Times New Roman', Times, serif;
 }
 .dicas-maquiagem{
     background-color:  antiquewhite;
@@ -85,33 +69,39 @@ h4, li{
     padding: 50px;
     margin-top: 10px;
 }
-aside {
-    background-color: #e78e9a;
-    color: #ffffff;
-    position: fixed;
-    width: 200px;
-    top: 180px;
-    bottom: 0;
-}
 .entre-contato{
-    padding: 20px;
-}
-.entre-contato h3{
-    margin-bottom: 10px;
-    text-transform: uppercase;
+    background-color: antiquewhite;
+    padding: 50px;
+    margin-top: 10px;
+    text-align: justify;
 }
 .entre-contato p{
     padding: 5px;
 }
-footer{
-    background-color: #e78e9a;
-    color: rgb(0, 0, 0);
-    text-align: center;
-    margin-left: 200px;
+.entre-contato h3{
+    text-transform: uppercase;
+    margin-bottom: 10px;
 }
-
-
-
-
-
-
+aside {
+    grid-area: aside;
+    background-color: #f3a5f3;
+    color: #ffffff;
+    position: fixed;
+    top: 144px;
+    bottom: 80px;
+}
+footer{
+    grid-area: footer;
+    background-color: #e78e9a;
+    text-align: center;
+}
+footer p{
+    margin-top: 30px;
+    text-transform: uppercase;
+}
+body{
+    display: grid;
+    grid-template-areas:"header header" "aside main" "footer footer";
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 80px 1fr 80px;
+}
