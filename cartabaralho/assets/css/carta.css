@@ -1,0 +1,79 @@
+body{
+    margin:0 ;
+    background-color: #110202;
+}
+.carta{
+    background-color: #ffffff;
+    width: 300px;
+    height: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+}
+.espadas-centro img{
+    width: 50px;
+    height: 50px;
+    margin-left: 35px;
+}
+.espadas-cima{
+    transform: translate(15%);
+}
+.espadas-meio{
+    transform: translateX(30%) translateY(60px);
+}
+.espadas-baixo{
+    transform: translate(15%) translateY(130px);
+}
+.espadas-baixo img{
+    transform: scaleY(-1);
+}
+.cinco img{
+    height: 30px;
+    width: 30px;
+}
+.logo img{
+    width: 25px;
+    height: 25px;
+}
+.logo{
+    display: flex;
+    flex-direction: column;
+    transform: translateY(10px) translateX(5px);
+}
+.logo-baixo img{
+    width: 25px;
+    height: 25px;
+}
+.logo-baixo{
+    display: flex;
+    flex-direction: column;
+    transform: translateX(-5px) translateY(125px) rotate(180deg);
+} 
+.flip-card {
+    width: 300px;
+    height: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    perspective: 1000px;
+}
+.movimento-carta {
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+.carta-atras {
+    backface-visibility: hidden; 
+    transform: rotateY(180deg); 
+    border-radius: 10px;
+}
+.carta-atras img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+.flip-card:hover .movimento-carta{
+    transform: rotateY(180deg);
+}
