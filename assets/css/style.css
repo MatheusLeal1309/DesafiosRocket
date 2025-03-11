@@ -160,6 +160,9 @@ h4{
         margin-left: 0;
         margin-top: 0;
     }
+    .text{
+        margin: 0;    
+    }
     .text h1 {
         font-size: 2rem;
     }
