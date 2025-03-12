@@ -77,3 +77,11 @@ body{
 .flip-card:hover .movimento-carta{
     transform: rotateY(180deg);
 }
+
+
+@media (min-width: 600px) {
+    .carta {
+        width: 320px;
+        height: 420px;
+    }
+}

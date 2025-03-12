@@ -135,6 +135,124 @@ footer{
     color: #ffffff;
 }
 
+@media (max-width: 600px) {
+    #header {
+        padding: 20px;
+    }
+    #header p {
+        font-size: 18px;
+    }
+    .menu {
+        font-size: 20px;
+        margin-top: 10%;
+    }
+    .bebidas h3,
+    .salgados h3,
+    .doces h3 {
+        font-size: 20px;
+        margin-left: 10px;
+    }
+    .titulo {
+        font-size: 18px;
+    }
+    li {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    #main {
+        padding: 20px;
+    }
+    table {
+        width: 100%;
+        font-size: 14px;
+    }
+    td, th {
+        padding: 8px;
+    }
+    .contato p {
+        font-size: 18px;
+    }
+    .contato h2 {
+        font-size: 22px;
+    }
+    .forms {
+        width: 90%;
+        height: auto;
+        flex-direction: column;
+        padding: 15px;
+    }
+    .forms h3 {
+        width: 100%;
+        text-align: center;
+    }
+    input, select, button {
+        font-size: 18px;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    footer {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
 
-
-
+@media (min-width: 600px) and (max-width: 1000px) {
+    #header {
+        padding: 30px;
+    }
+    #header p {
+        font-size: 22px;
+    }
+    .menu {
+        font-size: 25px;
+        margin-top: 5%;
+    }
+    .bebidas h3,
+    .salgados h3,
+    .doces h3 {
+        font-size: 22px;
+        margin-left: 15px;
+    }
+    .titulo {
+        font-size: 20px;
+    }
+    li {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+    #main {
+        padding: 30px;
+    }
+    th{
+        padding: 5px;
+    }
+    table {
+        width: 90%;
+        font-size: 16px;
+    }
+    .contato p {
+        font-size: 18px;
+    }
+    .contato h2 {
+        font-size: 24px;
+    }
+    .forms {
+        width: 70%;
+        height: auto;
+        flex-direction: column;
+        padding: 15px;
+    }
+    .forms h3 {
+        width: 100%;
+        text-align: center;
+    }
+    input, select, button {
+        font-size: 18px;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    footer {
+        padding: 15px;
+        font-size: 16px;
+    }
+}

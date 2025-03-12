@@ -41,7 +41,6 @@ a{
 }
 main {
     grid-area: main;
-    /* overflow: auto; */
     padding-top: 64px;
 }
 #main h2{
@@ -108,4 +107,48 @@ body{
     grid-template-areas:"header header" "aside main" "footer footer";
     grid-template-columns: 200px 1fr;
     grid-template-rows: 80px 1fr 80px;
+}
+
+@media (max-width: 600px) {
+    body {
+        grid-template-areas: "header" "main" "footer";
+        grid-template-columns: 1fr;
+        grid-template-rows: 80px 1fr 80px;
+    }
+    #header img {
+        width: 50px;
+        height: 50px;
+    }
+    .menu {
+        margin-top: 20px;
+        text-align: center;
+    }
+    .menu li {
+        margin-right: 0;
+        margin-bottom: 20px;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .dicas-maquiagem, .tendencias-novidades, .cuidados-pele, .produtos, .entre-contato {
+        padding: 20px;
+    }
+    .dicas-maquiagem, .cuidados-pele, .entre-contato {
+        background-color: antiquewhite;
+    }
+    .tendencias-novidades, .produtos {
+        background-color: #ff465f;
+    }
+    .fixed {
+        position: absolute;
+        top: 80px;
+        right: 0;
+        width: 100%;
+    }
+    aside {
+        display: none;
+    }
+    footer {
+        padding: 1rem;
+    }
 }
