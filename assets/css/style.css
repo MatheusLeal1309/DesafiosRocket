@@ -57,11 +57,12 @@ body{
     grid-template-columns: 400px 1fr;
 }
 .sobre-mim img{
-    border-radius: 50%;
+    border-radius: 10%;
     width: 300px;
     height: 300px;
     margin-top: 20%;
     margin-left: 10%;
+    box-shadow: 10px 10px 10px #a81616;
 }
 .topicos{
     margin: 10px;
@@ -103,7 +104,7 @@ body{
 .projetos-grid div {
     width: 100%; 
     max-width: 250px; 
-    box-shadow:0 0 5px rgb(255, 255, 255);
+    box-shadow:0 5px 5px rgb(255, 255, 255);
     border-radius: 10px;
     transition: 0.4s;
 }
@@ -139,7 +140,24 @@ h4{
     margin-left: 20px;
     font-size: 25px;
 }
+.contato a{
+    opacity: 1;
+}
+.contato {
+    background-color: #ee8166;
+    text-align: center;
+}
+.contato img{
+    width: 80px;
+    margin-left:50px ;
+}
+.contato img:hover{
+    transform: scale(1.1);
+}
 
+
+
+/*Responsividade*/
 @media (max-width: 600px) {
     .topo {
         flex-direction: column;
