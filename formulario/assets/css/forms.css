@@ -1,46 +1,56 @@
 *{
     margin: 0;
-    padding: 0 auto;
+    padding: 0;
     font-family: Oswald, Arial, Helvetica, sans-serif;
-    align-items: center;
 }
 html{
-    background-color: #140907;
+    background-image: url(../img/backgrounddd.jpg);
+    height: 100%;
+    color: #ffffff;
 }
 body{
+    height: 100vh;
+    margin: 0;
     display: flex;
-    flex-direction: column;
-    background-color: #e2e2e2;
-    padding: 30px;
-    border-radius: 50px;
-    margin-top: 30px;
-    margin-left: 25%;
-    margin-right: 25%;
+    justify-content: center;
+    align-items: center;
 }
-h1{
-    padding: 25px;
+#main{
+    padding: 50px;
+    background-color: #00000079;
+    border-radius: 10px;
 }
-h2{
-    padding: 25px;
+.contact-me{
+    text-transform: uppercase;
+    padding: 20px;
+    background-color: #000000a4;
+    border-radius: 5px;
+}
+.form-contact{
+    text-align: center;
+    padding: 10px;
+}
+.form{
+    background-color: #5034159f;
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 10px;
 }
 label{
-    font-size: 18px;
+    padding: 20px;
 }
 input{
-    text-align: center;
-    font-size: 18px;
-}
-p{
-    margin-top: 20px;
-    margin-bottom: 10px;
+    width: 95%;
+    margin-top: 5px;
+    padding: 5px;
 }
 select{
-    font-size: 18px;
+    margin-top: 5px;
+    font-size: 15px
 }
 button{
-    font-size: 20px;
-    text-align: center;
-}
-form{
-    margin-bottom: 190px;
+    margin-right: 5px;
+    font-size: 15px;
+    margin-top: 15px;
+    text-transform: uppercase;
 }

@@ -121,18 +121,11 @@ function addPost(post) {
 posts.forEach(addPost);
 
 
+// menuButton.addEventListener("click", toogleMenu);
+
 // for (i = 0; i < posts.length; i++) {
 //     addPost(posts[i]);
 // }
-
-
-
-
-
-
-
-
-
 
 
 // const header = document.getElementById("header");

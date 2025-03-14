@@ -6,42 +6,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario</title>
     <link rel="stylesheet" href="./assets/css/forms.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <h1>Entre em contato conosco</h1>
-    <h2>Formulário de contato</h2>
+    <main id="main">
+        <section class="contact-me">
+            <h1>Entre em contato conosco</h1>
+        </section>
 
-    <form action="">
-        <label for="">
-            <p>Nome completo:</p>
-            <input type="text" name="texto" id="" required placeholder="Digite seu nome completo">
+        <section class="form">
+            <section class="form-contact">
+                <h2>Formulário de contato</h2>
+            </section>
+            <form action="">
+                <label for="name">
+                    <p>Nome completo:</p>
+                    <input type="text" name="texto" id="" required placeholder="Digite seu nome">
+                </label>
+                <br>
+                <label for="email">
+                    <p>Email:</p>
+                    <input type="email" name="email" id="" required placeholder="Digite seu email">
+                </label>
+                <br>
+                <label for="telefone">
+                    <p>Telefone:</p>
+                    <input type="tel" name="telefone" id="" placeholder="(XX) XXXXX-XXXX" maxlength="11">
+                </label>
+                <label for="assunto">
+                    <p>Selecione o assunto:</p>
+                    <input type="text" name="assunto" id="" required>
+                    <select name="opcao" id="">
+                        <option value="" disabled selected>Selecione uma opção</option>
+                        <option value="reclamacao">Reclamação</option>
+                        <option value="duvidas">Dúvidas</option>
+                        <option value="sugestao">Sugestão</option>
+                    </select>
+        </section>
         </label>
-        <br>
-        <label for="">
-            <p>Email:</p>
-            <input type="email" name="email" id="" required placeholder="Digite seu email">
-        </label>
-        <br>
-        <label for="">
-            <p>Telefone:</p>
-            <input type="tel" name="telefone" id="" placeholder="(XX) XXXXX-XXXX" maxlength="11">
-        </label>
-        <label for="">
-            <p>Selecione o assunto:</p>
-            <input type="text" name="assunto" id="" required>
-            <select name="opcao" id="">
-                <option value="" disabled selected>Selecione uma opção</option>
-                <option value="reclamacao">Reclamação</option>
-                <option value="duvidas">Dúvidas</option>
-                <option value="sugestao">Sugestão</option>
-            </select>
-        </label>
-        <br><br>
         <button type="submit">Enviar</button>
         <button type="reset">Reset</button>
-    </form>
-
+        </form>
+    </main>
 </body>
 
 </html>
