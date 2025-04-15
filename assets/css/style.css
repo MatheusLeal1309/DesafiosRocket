@@ -16,7 +16,7 @@ body{
     flex-direction: row;
     align-items: center;
     padding: 1rem;
-    background-color: #171810;
+    background-color: #101110;
 }
 .text h1{
     font-size: 2rem;
@@ -38,7 +38,7 @@ body{
 }
 .logo img {
     max-width: 100%;
-    height: auto;
+    height: 800px;
     border-radius: 10px;
 }
 .sub-titulo{
