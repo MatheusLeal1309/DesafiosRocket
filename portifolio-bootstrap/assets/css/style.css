@@ -1,0 +1,13 @@
+.home{
+    background-color: #101110;
+    min-height: 100vh;
+}
+
+.logo img{
+    width: 500px;
+    height: 500px;
+}
+.icon{
+    width: 80px;
+    height: 80px;
+}

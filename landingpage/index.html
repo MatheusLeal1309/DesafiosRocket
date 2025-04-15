@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+    <header class="bg-dark" id="header">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container" id="home">
+                <a class="navbar-brand text-white text-uppercase" href="#home"><img class="logo-img"
+                        src="./assets/img/logo.png" alt="logo">Leal's Tech</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarDropdown"
+                    aria-controls="navbarDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarDropdown">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a href="#home" class="nav-link active text-white" aria-current="page">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#services" class="nav-link text-white">Serciços</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#contato" class="nav-link text-white">Contato</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <section class="home">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-sm-12 col-md-6 col-xl-4 ps-md-5 ps-3">
+                        <h1 class="text-white">Conheça a Leal's Tech</h1>
+                        <p class="sobre-leal text-white">A Leal's Tech é uma empresa especializada em soluções de
+                            desenvolvimento
+                            de sistemas full stack. Unimos tecnologia, inovação e experiência para transformar ideias em
+                            plataformas digitais eficientes, responsivas e personalizadas. Nosso compromisso é entregar
+                            resultados que impulsionam negócios e otimizam processos.</p>
+                    </div>
+                    <div
+                        class="col-sm-12 col-md-6 col-xl-8 d-flex justify-content-center justify-content-xl-end mt-4 mt-md-0">
+                        <img src="./assets/img/undraw_version-control_e4yu.svg" class="img-fluid" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </header>
+
+    <main id="main" class="container flex-grow-1">
+        <section id="services">
+            <div class="container">
+                <h2 class="text-center pt-5">Serviços</h2>
+                <p class="text-center">Ofereço soluções completas em desenvolvimento de sistemas como desenvolvedor full
+                    stack. Criação de aplicações modernas, responsivas e integradas com as melhores tecnologias do
+                    mercado.</p>
+
+                <div class="row pt-5 gx-5 pb-5">
+                    <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+                        <div class="card h-100">
+                            <img src="./assets/img/undraw_uploading_nu4x.svg" class="card-img-top"
+                                alt="Upload de dados">
+                            <div class="card-body">
+                                <h5 class="card-title">APIs e Integrações</h5>
+                                <p class="card-text">Desenvolvimento e integração de APIs RESTful para conectar seu
+                                    sistema com outros serviços e plataformas.</p>
+                                <a href="#" class="btn btn-primary">Saiba mais</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+                        <div class="card h-100">
+                            <img src="./assets/img/undraw_design-feedback_kzg9.svg" class="card-img-top"
+                                alt="Design feedback">
+                            <div class="card-body">
+                                <h5 class="card-title">Front-end Responsivo</h5>
+                                <p class="card-text">Criação de interfaces modernas e responsivas utilizando HTML, CSS,
+                                    JavaScript e frameworks como Bootstrap.</p>
+                                <a href="#" class="btn btn-primary">Saiba mais</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+                        <div class="card h-100">
+                            <img src="./assets/img/undraw_location-tracking_q3yd.svg" class="card-img-top"
+                                alt="Rastreamento">
+                            <div class="card-body">
+                                <h5 class="card-title">Back-end Robusto</h5>
+                                <p class="card-text">Desenvolvimento de lógicas de negócio, gerenciamento de banco de
+                                    dados e segurança com C#, .NET, Node.js e mais.</p>
+                                <a href="#" class="btn btn-primary">Saiba mais</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+    <footer class="footer bg-dark">
+        <div class="container" id="contato">
+            <div class="row pt-4 pb-5 text-center text-lg-start">
+                <div class="col-sm-12 col-md-4 mb-4 mb-md-0">
+                    <div class="phones d-flex flex-column align-items-center align-items-md-start">
+                        <h4 class="text-white">Entre em contato</h4>
+                        <span class="text-white mt-4 mb-3"><img class="icons" src="./assets/img/icons8-whatsapp.svg"
+                                alt="wpp"> (11) 98989-0038</span>
+                        <span class="text-white"><img class="icons" src="./assets/img/call-outline.svg" alt="telephone">
+                            (11) 4675-9659</span>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4 mb-4 mb-md-0 d-flex justify-content-center">
+                    <figure class="logo">
+                        <img src="./assets/img/logo.png" alt="logo">
+                        <figcaption class="text-white text-center fw-semibold">Leal's Tech</figcaption>
+                    </figure>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <div class="d-flex flex-column align-items-center">
+                        <h4 class="text-white">Redes sociais</h4>
+                        <span class="text-white my-3"><img class="icons me-1" src="./assets/img/icons8-facebook.svg"
+                                alt="facebook"> Facebook</span>
+                        <span class="text-white mb-3"><img class="icons me-1" src="./assets/img/icons8-instagram.svg"
+                                alt="instagram"> Instagram</span>
+                        <span class="text-white"><img class="icons me-1" src="./assets/img/icons8-twitter.svg"
+                                alt="twitter"> Twitter</span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col pb-2 d-flex justify-content-center">
+                    <span class="text-white">Matheus Leal | &copy; Copyright 2025</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

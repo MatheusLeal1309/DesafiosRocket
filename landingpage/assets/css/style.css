@@ -1,0 +1,33 @@
+html {
+    scroll-behavior: smooth;
+}
+.card {
+    box-shadow: rgba(0, 0, 0, 0.4) -5px 5px,rgba(0, 0, 0, 0.3) -10px 10px,rgba(0, 0, 0, 0.2) -15px 15px,rgba(0, 0, 0, 0.1) -20px 20px,rgba(240, 46, 170, 0.05) -25px 25px;
+}
+.card img {
+    width: 250px;
+    height: 250px;
+}
+.icons {
+    width: 40px;
+    height: 40px;
+}
+.logo img {
+    width: 200px;
+    height: 200px;
+    border-radius: 5%;
+}
+.logo-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+#header {
+    height: 100vh;
+}
+.home {
+    padding-top: 100px;
+}
+.sobre-leal {
+    text-align: justify;
+}
