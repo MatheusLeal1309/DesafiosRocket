@@ -1,6 +1,7 @@
 .home{
     background-color: #101110;
     min-height: 100vh;
+    scroll-behavior: smooth;
 }
 
 .logo img{
@@ -19,15 +20,27 @@
 p{
     text-align: justify;
 }
-.card{
-    width: 300px;
-    height: 380px;
-}
 .card img{
     width: 100%;
-    height: 200px;
+    height: 250px;
 }
 .icons-contato img{
     width: 50px;
     height: 50px;
+}
+@media (max-width: 1200px) {
+
+    .img-perfil img{
+    width: 400px;
+    height: 400px;
+    box-shadow: 0px 9px 30px 0px rgba(208,2,27,1);
+}
+}
+@media (max-width: 600px) {
+
+    .img-perfil img{
+    width: 200px;
+    height: 200px;
+    box-shadow: 0px 9px 30px 0px rgba(208,2,27,1);
+}
 }
