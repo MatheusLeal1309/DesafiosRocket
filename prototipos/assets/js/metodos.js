@@ -1,4 +1,4 @@
-const numbers = [1, 2, 3, 4];
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8];
 
 Array.prototype.myMap = function (callback) {
     const result = [];
@@ -44,10 +44,17 @@ Array.prototype.myFind = function (callback) {
 };
 
 
-const double = numbers.myMap(n => n * 2);
+const resultMap = numbers.myMap(n => n * 2);
 const pairs = numbers.myFilter(n => n % 2 === 0);
-const sum = numbers.myReduce((a, n) => a + n, 0);
+const sum = numbers.myReduce((a, n) => a + n);
+const names = ['Matheus', 'Ana', 'Joao'];
+const find = numbers.myFind(n => n > 5);
 
-console.log("Map:", double);
+
+names.myForEach((name) => {
+    console.log("ForEach:", name);
+});
+console.log("Map:", resultMap);
 console.log("Filter:", pairs);
 console.log("Reduce:", sum);
+console.log("Find:", find);
