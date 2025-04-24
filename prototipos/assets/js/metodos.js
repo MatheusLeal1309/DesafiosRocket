@@ -22,7 +22,7 @@ Array.prototype.myReduce = function (callback, firstValue) {
     let package = firstValue !== undefined ? firstValue : this[0];
     let i = firstValue !== undefined ? 0 : 1;
 
-    for (; i < this.length; i++) {
+    for (i ; i < this.length; i++) {
         package = callback(package, this[i], i, this);
     }
     return package;
