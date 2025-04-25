@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app="escolaApp" lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+
+<body ng-controller="AppController">
+    <header id="header">
+        <h1 ng-bind="mensagem"></h1>
+    </header>
+    <main id="main">
+        <h2>Dados do usuário</h2>
+        <p><strong>Nome:</strong> <span ng-bind="usuario.nome"></span></p>
+        <p><strong>Tipo:</strong> <span ng-bind="usuario.tipo"></span></p>
+    </main>
+    <script src="./assets/js/automacao.js"></script>
+</body>
+
+</html>
