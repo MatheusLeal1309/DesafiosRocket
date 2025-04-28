@@ -14,9 +14,19 @@
         <h1 ng-bind="mensagem"></h1>
     </header>
     <main id="main">
-        <h2>Dados do usuário</h2>
-        <p><strong>Nome:</strong> <span ng-bind="usuario.nome"></span></p>
-        <p><strong>Tipo:</strong> <span ng-bind="usuario.tipo"></span></p>
+        <div ng-repeat="usuario in usuarios">
+            <h2>Dados do usuário</h2>
+            <p><strong>Nome:</strong> <span ng-bind="usuario.nome"></span></p>
+            <p><strong>Tipo:</strong> <span ng-bind="usuario.tipo"></span></p>
+
+
+            <img ng-if="usuario.tipo === 'Aluno'" src="./assets/img/aluno.jpg" alt="Imagem de Aluno" width="100">
+
+            <img ng-if="usuario.tipo === 'Professor'" src="assets/img/professor.jpg" alt="Imagem de Professor"
+                width="100">
+
+            <hr>
+        </div>
     </main>
     <script src="./assets/js/automacao.js"></script>
 </body>
