@@ -3,11 +3,60 @@
     padding: 0;
     box-sizing: border-box;
 }
-body{
-    background-color: #0e0a0a;
-    color: #cacaca;
+
+body {
+    background: linear-gradient(135deg, #0f0c29, #302b63, #00c9ff);
+    color: #ffffff;
+    min-height: 100vh;
+    font-family: 'Segoe UI', sans-serif;
 }
-#header{
+header h1 {
     text-align: center;
-    padding-top: 25px;
+    padding: 30px 0;
+    font-weight: bold;
+    color: #00e5ff;
+    text-shadow: 0 0 10px rgba(0, 233, 255, 0.7);
+}
+
+#filtros input,
+#filtros select {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    border: 1px solid #00e5ff;
+}
+.table th {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #00e5ff;
+}
+.table td {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.table thead th,
+.table tbody td {
+  color: #ffffff;
+}
+.fa-user-graduate {
+    color: #00e5ff;
+    text-shadow: 0 0 5px #00e5ff;
+}
+.table tbody tr:hover {
+    background-color: rgba(0, 233, 255, 0.1);
+    box-shadow: 0 0 10px rgba(0, 233, 255, 0.3);
+    transform: scale(1.01);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.fa-chalkboard-teacher {
+    color: #64ffda;
+    text-shadow: 0 0 5px #64ffda;
+}
+.card-style {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 0 12px rgba(0, 201, 255, 0.3);
+}
+#totais p {
+    font-weight: bold;
+    color: #b2ebf2;
+    text-shadow: 0 0 5px rgba(0, 255, 255, 0.6);
 }

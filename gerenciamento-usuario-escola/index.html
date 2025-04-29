@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gerenciamento</title>
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
 </head>
 
@@ -13,21 +15,47 @@
     <header id="header">
         <h1 ng-bind="mensagem"></h1>
     </header>
-    <main id="main">
-        <div ng-repeat="usuario in usuarios">
-            <h2>Dados do usuário</h2>
-            <p><strong>Nome:</strong> <span ng-bind="usuario.nome"></span></p>
-            <p><strong>Tipo:</strong> <span ng-bind="usuario.tipo"></span></p>
+    <main class="container my-5" id="main">
+        <div class="text-center mb-4" id="filtros">
+            <input type="text" class="form-control d-inline-block w-25 mr-2" ng-model="filtroNome"
+                placeholder="Buscar por nome" />
+            <select class="form-control d-inline-block w-25" ng-model="filtroTipo">
+                <option value="">Todos</option>
+                <option value="Aluno">Aluno</option>
+                <option value="Professor">Professor</option>
+            </select>
+        </div>
 
+        <div class="table-responsive card-style p-4">
+            <table class="table table-bordered text-center">
+                <thead>
+                    <tr>
+                        <th>Ícone</th>
+                        <th>Nome</th>
+                        <th>Tipo</th>
+                        <th>Data de Cadastro</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="usuario in usuarios | filter:filtroNome | filter:{tipo: filtroTipo}">
+                        <td>
+                            <i class="fa-2x"
+                                ng-class="{'fas fa-user-graduate': usuario.tipo === 'Aluno','fas fa-chalkboard-teacher': usuario.tipo === 'Professor'}"></i>
+                        </td>
+                        <td>{{ usuario.nome | uppercase }}</td>
+                        <td>{{ usuario.tipo }}</td>
+                        <td>{{ usuario.dataCadastro | date:'dd/MM/yyyy' }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 
-            <img ng-if="usuario.tipo === 'Aluno'" src="./assets/img/aluno.jpg" alt="Imagem de Aluno" width="100">
-
-            <img ng-if="usuario.tipo === 'Professor'" src="assets/img/professor.jpg" alt="Imagem de Professor"
-                width="100">
-
-            <hr>
+        <div class="text-center mt-4" id="totais">
+            <p>Total de Alunos: {{ (usuarios | filter:{tipo:'Aluno'}).length }}</p>
+            <p>Total de Professores: {{ (usuarios | filter:{tipo:'Professor'}).length }}</p>
         </div>
     </main>
+
     <script src="./assets/js/automacao.js"></script>
 </body>
 
