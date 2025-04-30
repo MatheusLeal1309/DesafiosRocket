@@ -1,62 +1,91 @@
 <!DOCTYPE html>
-<html ng-app="escolaApp" lang="pt-br">
+<html lang="pt-br" ng-app="app">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gerenciamento</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
-<body ng-controller="AppController">
-    <header id="header">
-        <h1 ng-bind="mensagem"></h1>
-    </header>
-    <main class="container my-5" id="main">
-        <div class="text-center mb-4" id="filtros">
-            <input type="text" class="form-control d-inline-block w-25 mr-2" ng-model="filtroNome"
-                placeholder="Buscar por nome" />
-            <select class="form-control d-inline-block w-25" ng-model="filtroTipo">
-                <option value="">Todos</option>
-                <option value="Aluno">Aluno</option>
-                <option value="Professor">Professor</option>
-            </select>
+<body class="container mt-5">
+    <div ng-controller="AppController">
+        <div class="jumbotron text-center">
+            <h1 class="display-4" ng-bind="mensagem"></h1>
         </div>
 
-        <div class="table-responsive card-style p-4">
-            <table class="table table-bordered text-center">
-                <thead>
-                    <tr>
-                        <th>Ícone</th>
-                        <th>Nome</th>
-                        <th>Tipo</th>
-                        <th>Data de Cadastro</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr ng-repeat="usuario in usuarios | filter:filtroNome | filter:{tipo: filtroTipo}">
-                        <td>
-                            <i class="fa-2x"
-                                ng-class="{'fas fa-user-graduate': usuario.tipo === 'Aluno','fas fa-chalkboard-teacher': usuario.tipo === 'Professor'}"></i>
-                        </td>
-                        <td>{{ usuario.nome | uppercase }}</td>
-                        <td>{{ usuario.tipo }}</td>
-                        <td>{{ usuario.dataCadastro | date:'dd/MM/yyyy' }}</td>
-                    </tr>
-                </tbody>
-            </table>
+        <div class="card mb-4">
+            <div class="card-body">
+                <h5 class="card-title">Usuário Atual</h5>
+                <p class="card-text">Nome: <strong>{{ usuario.nome }}</strong></p>
+                <p class="card-text">Tipo: <strong>{{ usuario.tipo }}</strong></p>
+                <div ng-if="usuario.tipo === 'Aluno'">
+                    <i class="bi bi-mortarboard-fill" style="font-size: 3rem;"></i>
+                </div>
+                <div ng-if="usuario.tipo === 'Professor'">
+                    <i class="bi bi-person-badge-fill" style="font-size: 3rem;"></i>
+                </div>
+            </div>
         </div>
 
-        <div class="text-center mt-4" id="totais">
-            <p>Total de Alunos: {{ (usuarios | filter:{tipo:'Aluno'}).length }}</p>
-            <p>Total de Professores: {{ (usuarios | filter:{tipo:'Professor'}).length }}</p>
-        </div>
-    </main>
+        <div class="mb-4">
+            <h2>Lista de Usuários</h2>
+            <div class="form-row align-items-center mb-3">
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" ng-model="filtro" placeholder="Buscar nome">
+                </div>
+                <div class="col-sm-4">
+                    <select class="form-control" ng-model="filtroTipo">
+                        <option value="">Todos</option>
+                        <option value="Aluno">Aluno</option>
+                        <option value="Professor">Professor</option>
+                    </select>
+                </div>
+            </div>
 
-    <script src="./assets/js/automacao.js"></script>
+            <ul class="list-group mb-3">
+                <li class="list-group-item d-flex justify-content-between align-items-center"
+                    ng-repeat="u in usuarios | filter:filtro | filter:{tipo: filtroTipo}">
+                    <span>
+                        <strong>{{ u.nome | uppercase }}</strong> - {{ u.tipo }} - {{ u.dataCadastro | date:'dd/MM/yyyy'
+                        }}
+                    </span>
+                    <button class="btn btn-danger btn-sm" ng-click="remover($index)">
+                        <i class="bi bi-trash"></i> Remover
+                    </button>
+                </li>
+            </ul>
+
+            <p>Total de Alunos: <strong>{{ (usuarios | filter:{tipo:'Aluno'}).length }}</strong></p>
+            <p>Total de Professores: <strong>{{ (usuarios | filter:{tipo:'Professor'}).length }}</strong></p>
+        </div>
+
+        <div class="card">
+            <div class="card-body">
+                <h3 class="card-title">Adicionar Novo Usuário</h3>
+                <div class="form-row">
+                    <div class="col-sm-6 mb-2">
+                        <input type="text" class="form-control" ng-model="novo.nome" placeholder="Nome">
+                    </div>
+                    <div class="col-sm-4 mb-2">
+                        <select class="form-control" ng-model="novo.tipo">
+                            <option value="Aluno">Aluno</option>
+                            <option value="Professor">Professor</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-2 mb-2">
+                        <button class="btn btn-primary btn-block" ng-click="adicionar(novo)">
+                            <i class="bi bi-plus-circle"></i> Adicionar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./assets/js/users.service.js"></script>
+    <script src="./assets/js/users.controller.js"></script>
 </body>
 
 </html>
