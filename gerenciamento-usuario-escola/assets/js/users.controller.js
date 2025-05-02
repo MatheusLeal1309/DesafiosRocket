@@ -1,4 +1,4 @@
-angular.module('app')
+angular.module('userModule')
   .controller('AppController', ['$scope', 'UsuarioService', function ($scope, UsuarioService) {
     $scope.mensagem = "Bem-vindo ao sistema de cadastro escolar";
     $scope.usuarios = UsuarioService.listar();
@@ -58,5 +58,4 @@ angular.module('app')
           }, 10000);
         });
     };
-
   }]);

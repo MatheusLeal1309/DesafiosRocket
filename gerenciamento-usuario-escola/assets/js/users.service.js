@@ -1,5 +1,5 @@
-angular.module('app', [])
-  .service('UsuarioService',['$q', function ($q) {
+angular.module('userModule')
+  .service('UsuarioService', ['$q', function ($q) {
     var usuarios = [
       { nome: 'Leandro Oliveira', tipo: 'Aluno', email: 'leandro@teste.com', dataCadastro: new Date() },
       { nome: 'Matheus Leal', tipo: 'Professor', email: 'matheus@teste.com', dataCadastro: new Date() },
