@@ -1,24 +1,59 @@
 body {
-    background-color: #121212;
-    color: #ffffff;
-  }
-  .card, .jumbotron, .list-group-item {
-    background-color: #1e1e1e;
-    border-color: #333;
-  }
-  .form-control, .btn, select {
-    background-color: #2a2a2a;
-    color: #fff;
-    border-color: #444;
-  }
-  .btn-primary {
-    background-color: #007bff;
-    border-color: #007bff;
-  }
-  .btn-danger {
-    background-color: #dc3545;
-    border-color: #dc3545;
-  }
-  input::placeholder {
-    color: #bbb;
-  }
+  background-color: #121212;
+  color: #ffffff;
+}
+.card, .jumbotron, .list-group-item {
+  background-color: #1e1e1e;
+  border-color: #333;
+}
+.form-control, .btn, select {
+  background-color: #2a2a2a;
+  color: #fff;
+  border-color: #444;
+}
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+.btn-danger {
+  background-color: #dc3545;
+  border-color: #dc3545;
+}
+input::placeholder {
+  color: #bbb;
+}
+.modal-backdrop-custom {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1050;
+}
+.modal-card {
+  background-color: #1e1e1e;
+  color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+}
+.modal-header {
+  border-bottom: 1px solid #444;
+  margin-bottom: 15px;
+}
+.modal-body {
+  padding-top: 0;
+}
+.close {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #fff;
+  cursor: pointer;
+}

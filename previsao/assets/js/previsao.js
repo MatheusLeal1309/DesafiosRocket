@@ -1,3 +1,4 @@
+const apiKey = "ac70e883f2f90bf1b621430dfd5bb713";
 const lang = "pt_br";
 const units = "metric"
 

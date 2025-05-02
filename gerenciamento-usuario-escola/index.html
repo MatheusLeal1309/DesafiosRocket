@@ -10,28 +10,20 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
-<body class="container mt-5">
-    <div ng-controller="AppController">
+<body ng-controller="AppController" class="container mt-5">
+    <div>
         <div class="jumbotron text-center">
             <h1 class="display-4" ng-bind="mensagem"></h1>
         </div>
 
-        <div class="card mb-4">
-            <div class="card-body">
-                <h5 class="card-title">Usuário Atual</h5>
-                <p class="card-text">Nome: <strong>{{ usuario.nome }}</strong></p>
-                <p class="card-text">Tipo: <strong>{{ usuario.tipo }}</strong></p>
-                <div ng-if="usuario.tipo === 'Aluno'">
-                    <i class="bi bi-mortarboard-fill" style="font-size: 3rem;"></i>
-                </div>
-                <div ng-if="usuario.tipo === 'Professor'">
-                    <i class="bi bi-person-badge-fill" style="font-size: 3rem;"></i>
-                </div>
-            </div>
-        </div>
-
         <div class="mb-4">
-            <h2>Lista de Usuários</h2>
+            <h2>Lista de usuários</h2>
+            <div class="alert alert-warning alert-dismissible fade show d-flex align-items-center"
+                ng-if="mensagemRemocao">
+                <i class="bi bi-exclamation-triangle-fill mr-2" style="font-size: 1.5rem;"></i>
+                <span ng-bind="mensagemRemocao" class="font-weight-bold"></span>
+            </div>
+
             <div class="form-row align-items-center mb-3">
                 <div class="col-sm-6">
                     <input type="text" class="form-control" ng-model="filtro" placeholder="Buscar nome">
@@ -43,17 +35,23 @@
                         <option value="Professor">Professor</option>
                     </select>
                 </div>
+
+                <div class="col-sm-2">
+                    <button class="btn btn-success btn-block" ng-click="abrirModal()">
+                        <i class="bi bi-person-plus"></i> Adicionar
+                    </button>
+                </div>
             </div>
 
             <ul class="list-group mb-3">
                 <li class="list-group-item d-flex justify-content-between align-items-center"
-                    ng-repeat="u in usuarios | filter:filtro | filter:{tipo: filtroTipo}">
+                    ng-repeat="u in usuarios | filter:(filtro | lowercase) | filter:{tipo: filtroTipo}">
                     <span>
-                        <strong>{{ u.nome | uppercase }}</strong> - {{ u.tipo }} - {{ u.dataCadastro | date:'dd/MM/yyyy'
-                        }}
+                        <strong ng-bind="u.nome | uppercase"></strong> - <span ng-bind="u.tipo"></span> -
+                        <span ng-bind="u.dataCadastro | date:'dd/MM/yyyy'"></span>
                     </span>
                     <button class="btn btn-danger btn-sm" ng-click="remover($index)">
-                        <i class="bi bi-trash"></i> Remover
+                        <i class="bi bi-trash"></i> <span ng-bind="removerBtn"></span>
                     </button>
                 </li>
             </ul>
@@ -61,29 +59,72 @@
             <p>Total de Alunos: <strong>{{ (usuarios | filter:{tipo:'Aluno'}).length }}</strong></p>
             <p>Total de Professores: <strong>{{ (usuarios | filter:{tipo:'Professor'}).length }}</strong></p>
         </div>
+    </div>
 
-        <div class="card">
-            <div class="card-body">
-                <h3 class="card-title">Adicionar Novo Usuário</h3>
-                <div class="form-row">
-                    <div class="col-sm-6 mb-2">
-                        <input type="text" class="form-control" ng-model="novo.nome" placeholder="Nome">
+    <div class="modal-backdrop-custom" ng-show="mostrarModal">
+        <div class="modal-card">
+            <div class="modal-header d-flex justify-content-between align-items-center">
+                <h4>Cadastro de Usuário</h4>
+                <button type="button" class="close" ng-click="fecharModal()">
+                    &times;
+                </button>
+            </div>
+            <div class="modal-body">
+                <form name="formUsuario" novalidate ng-submit="adicionar(novo)">
+                    <div class="form-group">
+                        <label>Nome</label>
+                        <input type="text" class="form-control" ng-model="novo.nome" name="nome" required>
+                        <small class="text-danger"
+                            ng-show="formUsuario.nome.$touched && formUsuario.nome.$error.required">
+                            O nome é obrigatório.
+                        </small>
                     </div>
-                    <div class="col-sm-4 mb-2">
-                        <select class="form-control" ng-model="novo.tipo">
+
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" class="form-control" ng-model="novo.email" name="email" required>
+                        <small class="text-danger"
+                            ng-show="formUsuario.email.$touched && formUsuario.email.$error.required">
+                            O e-mail é obrigatório.
+                        </small>
+                        <small class="text-danger"
+                            ng-show="formUsuario.email.$touched && formUsuario.email.$error.email">
+                            O e-mail não é válido.
+                        </small>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Tipo</label>
+                        <select class="form-control" ng-model="novo.tipo" name="tipo" required>
+                            <option value="" disabled selected>Selecione</option>
                             <option value="Aluno">Aluno</option>
                             <option value="Professor">Professor</option>
                         </select>
+                        <small class="text-danger"
+                            ng-show="formUsuario.tipo.$touched && formUsuario.tipo.$error.required">
+                            O tipo é obrigatório.
+                        </small>
                     </div>
-                    <div class="col-sm-2 mb-2">
-                        <button class="btn btn-primary btn-block" ng-click="adicionar(novo)">
-                            <i class="bi bi-plus-circle"></i> Adicionar
-                        </button>
+
+                    <div class="text-center my-2" ng-if="carregando">
+                        <div class="spinner-border text-primary" role="status"></div>
+                        <p>Carregando</p>
                     </div>
-                </div>
+
+                    <div class="alert alert-danger" ng-if="mensagemErro" role="alert" ng-bind="mensagemErro"></div>
+                    <div class="alert alert-success" ng-if="mensagemSucesso" role="alert">
+                        <strong><i class="bi bi-check-circle"></i> <span ng-bind="mensagemSucesso"></span></strong>
+                    </div>
+
+                    <button type="submit" class="btn btn-success btn-block"
+                        ng-disabled="formUsuario.$invalid || carregando">
+                        Cadastrar
+                    </button>
+                </form>
             </div>
         </div>
     </div>
+
     <script src="./assets/js/users.service.js"></script>
     <script src="./assets/js/users.controller.js"></script>
 </body>
